@@ -23,14 +23,25 @@ body {
 
 .logo {
     display: flex;
-    justify-content: center; /* Center the images horizontally */
     align-items: center; /* Center the images vertically */
 }
 
 .logo img {
-    max-width: 50%; /* Ensures the image does not exceed its container */
+    max-width: 20%; /* Ensures the image does not exceed its container */
     height: auto; /* Maintains aspect ratio */
     margin: 0; /* Remove any default margin */
+}
+.logo img:first-child {
+    position: absolute; /* Position the first image absolutely */
+    top: 0;
+    left: 50%; /* Align to the center horizontally */
+    transform: translateX(-50%); /* Adjust for center alignment */
+}
+
+.logo img:last-child {
+    position: absolute; /* Position the second image absolutely */
+    bottom: 0;
+    right: 0;
 }
 
 h2 {
