@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>DASHBOARD</h1>
+            <img id="dashboardIcon" src="icons/infinity-1.png" alt="Dashboard Icon">
+            <div class="dashboard">
+                <div class="gif-block">
+                    <img src="icons/hrv.gif" alt="GIF 1">
+                </div>
+                <div class="gif-block">
+                    <img src="icons/breathe.gif" alt="GIF 2">
+                </div>
+                <div class="block">
+                    <h3>Heart Rate </h3>
+                    <h4>[Beats/Minute]</h4>
+                    <p> 85 </p>
+                </div>
+                <div class="block">
+                    <h3>Respiratory Rate</h3>
+                    <h4>[Breathe/Minute]</h4>
+                    <p>12</p>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="index.html" onclick="history.back()"><img src="icons/back-button-svgrepo-com.svg" alt="Logout" class="icon"></a>
+                <a href="history.html"><img src="icons/history-svgrepo-com.svg" alt="History" class="icon"></a>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dashboardIcon = document.getElementById('dashboardIcon');
+
+            // Specify the alternative icon source
+            const originalIcon = "icons/infinity-1.png";
+            const alternativeIcon = "icons/infinity-3.png";
+            const thirdIcon = "icons/infinity-2.png";
+
+            dashboardIcon.addEventListener('click', function() {
+                // Check current icon source and switch it
+                if (dashboardIcon.src.includes(originalIcon)) {
+                    dashboardIcon.src = alternativeIcon;
+                } else if (dashboardIcon.src.includes(alternativeIcon)) {
+                    dashboardIcon.src = thirdIcon;
+                } else {
+                    dashboardIcon.src = originalIcon;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
